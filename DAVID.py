@@ -16,7 +16,7 @@ if __name__=='__main__':
     browser.find_elements_by_xpath("//li")[-2].click()
     browser.find_element_by_xpath("//button[@value='Functional Annotation Chart']").click()
     browser.switch_to_window(browser.window_handles[-1])
-    browser.save_screenshot(r'C:\Users\Zheng Peng\Desktop\test.png')
+    browser.save_screenshot('test.png')
     bsObj=BeautifulSoup(browser.page_source,'lxml')
     table=bsObj.find('table',{'class':'dataTable'})
     head=table.find('thead')
